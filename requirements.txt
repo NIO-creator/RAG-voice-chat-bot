@@ -1,0 +1,16 @@
+# Commerzbank chatbot — all local (no cloud, no API keys)
+# Install:  python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
+
+# --- Phase 1: grounded text-to-text graph ---
+langgraph==1.2.6
+langchain-ollama==1.1.0
+langchain-core==1.4.8
+pytest==9.1.1
+
+# --- Phase 2: voice (local STT + TTS) behind a FastAPI /chat wrapper ---
+faster-whisper==1.2.1     # STT (Whisper); pulls ctranslate2
+piper-tts==1.4.2          # TTS; pulls onnxruntime
+fastapi==0.138.0
+uvicorn==0.49.0
+httpx==0.28.1             # voice client -> /chat
+
