@@ -1,4 +1,4 @@
-# Commerzbank Chatbot — grounded, local, LangGraph
+# Chatbot — grounded, local, LangGraph
 
 A text chatbot that answers retail bank-account questions **only** from a local
 SQLite database, running entirely on local models (Ollama). No cloud APIs, no
